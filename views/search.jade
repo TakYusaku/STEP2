@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1=todo
+  .form
+    form#form
+      p
+        label(for='text') 内容:
+        input#text(type='text',name='text')
+      p
+        label(for='limit') 期限:
+        input#limit(type='date',name='limit')
+      p
+        input(type='submit',value='追加')
+  // ToDo一覧を表示する
+  .list
+
+// jQueryとtodo.jsを読み込む
+block scripts
+  script(src='http://code.jquery.com/jquery-2.0.0.min.js')
+  script(src='javascripts/todo.js')
